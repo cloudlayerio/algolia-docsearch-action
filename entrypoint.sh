@@ -14,6 +14,7 @@ pip install --no-cache-dir --trusted-host pypi.python.org pipenv
 
 # install packages without virtualenv
 pipenv install --system --deploy --ignore-pipfile
+pipenv shell
 
 # create the .env file for docsearch
 echo "APPLICATION_ID=${APPLICATION_ID}
@@ -21,6 +22,6 @@ API_KEY=${API_KEY}
 " > .env
 
 # run algolia docsearch
-./docsearch $GITHUB_WORKSPACE/$FILE
+./docsearch run $GITHUB_WORKSPACE/$FILE
 
 echo "🚀 Successfully indexed and uploaded the results to Algolia"
