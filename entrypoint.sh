@@ -22,4 +22,4 @@ echo "APPLICATION_ID=${APPLICATION_ID}
 API_KEY=${API_KEY}
 " > .env
 
-docker run --env-file=.env -e "CONFIG=$(cat $GITHUB_WORKSPACE/$FILE | jq -r tostring)" algolia/docsearch-scraper
+docker run --env-file=.env -e "CONFIG=$(cat $FILE | jq -r tostring)" algolia/docsearch-scraper
