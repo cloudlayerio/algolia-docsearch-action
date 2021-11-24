@@ -17,4 +17,9 @@ apt install docker-ce -y
 
 ls -la $GITHUB_WORKSPACE
 cat $GITHUB_WORKSPACE/$FILE | jq -r tostring
-docker run -e "APPLICATION_ID="{$APPLICATION_ID}"" -e "API_KEY="{$API_KEY}"" -e "CONFIG=$(cat $GITHUB_WORKSPACE/$FILE | jq -r tostring)" algolia/docsearch-scraper
+
+echo "APPLICATION_ID=${APPLICATION_ID}
+API_KEY=${API_KEY}
+" > .env
+
+docker run --env-file=.env -e "CONFIG=$(cat $GITHUB_WORKSPACE/$FILE | jq -r tostring)" algolia/docsearch-scraper
