@@ -1,4 +1,4 @@
-FROM FROM ubuntu:latest
+FROM ubuntu:latest
 
 COPY entrypoint.sh /entrypoint.sh
 
