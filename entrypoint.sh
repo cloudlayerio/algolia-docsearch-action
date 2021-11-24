@@ -21,6 +21,6 @@ API_KEY=${API_KEY}
 " > .env
 
 # run algolia docsearch
-./docsearch run $GITHUB_WORKSPACE/$FILE
+./docsearch $GITHUB_WORKSPACE/$FILE
 
 echo "🚀 Successfully indexed and uploaded the results to Algolia"
