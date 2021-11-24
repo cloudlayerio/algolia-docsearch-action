@@ -13,7 +13,7 @@ cd docsearch-scraper/
 pip install --no-cache-dir --trusted-host pypi.python.org pipenv
 
 # install packages without virtualenv
-pipenv install --system --deploy --ignore-pipfile
+pipenv install
 pipenv shell
 
 # create the .env file for docsearch
