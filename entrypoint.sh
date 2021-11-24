@@ -10,13 +10,13 @@ git clone https://github.com/algolia/docsearch-scraper.git
 cd docsearch-scraper/
 
 # install pipenv without cache
-pip install --no-cache-dir --trusted-host pypi.python.org pipenv
-pip install --user pipx
-pipx install pipenv
+#pip install --no-cache-dir --trusted-host pypi.python.org pipenv
+#pip install --user pipx
+#pipx install pipenv
 
 # install packages without virtualenv
-pipenv install
-pipenv shell
+#pipenv install
+#pipenv shell
 
 # create the .env file for docsearch
 echo "APPLICATION_ID=${APPLICATION_ID}
