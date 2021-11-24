@@ -11,6 +11,8 @@ cd docsearch-scraper/
 
 # install pipenv without cache
 pip install --no-cache-dir --trusted-host pypi.python.org pipenv
+pip install --user pipx
+pipx install pipenv
 
 # install packages without virtualenv
 pipenv install
